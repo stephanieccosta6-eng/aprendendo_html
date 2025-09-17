@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    background: #f3f7fb;
+    grid-template-areas: "header header" "main   aside" "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header,
+main,
+aside,
+footer,
+section,
+article {
+    border-radius: 6px;
+    padding: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.12);
+}
+
+header {
+    background: linear-gradient(180deg, #edb8d4, #e295de);
+    border-color: #da34be;
+}
+
+header h1 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #ec5ed6;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #05464f;
+    font-weight: 600;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: rgba(5, 70, 79, 0.08);
+}
+main {
+    background: #e07bb8;
+    border-color: #c92e86;
+    padding: 18px;
+}
+
+main section article {
+    background: rgba(255, 255, 255, 0.35);
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+main section article h2 {
+    margin-bottom: 6px;
+    color: #7b2d2d;
+}
+
+aside {
+    background: linear-gradient(180deg, #ffd6fd, #db5bbf);
+    border-color: #e64ed4;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+}
+
+aside h2 {
+    margin-bottom: 6px;
+    color: #6b5b00;
+}
+
+.icon-group {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.icon-group h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: #c40d6b;
+}
+
+.icons {
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        grid-template-areas: "header" "main" "aside" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto auto;
+    }
+    nav ul {
+        gap: 6px;
+    }
+}
